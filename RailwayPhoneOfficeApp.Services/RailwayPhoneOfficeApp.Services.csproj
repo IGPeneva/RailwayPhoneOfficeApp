@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RailwayPhoneOfficeApp.Data\RailwayPhoneOfficeApp.Data.csproj" />
+  </ItemGroup>
+
 </Project>

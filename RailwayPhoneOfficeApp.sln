@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp", "RailwayPhoneOfficeApp\RailwayPhoneOfficeApp.csproj", "{66BA5104-E785-4352-8579-B4C4E34C9544}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Data", "RailwayPhoneOfficeApp.Data\RailwayPhoneOfficeApp.Data.csproj", "{8F97A2B1-CAA1-4FAE-9F1F-F8EBE4F298DF}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Services", "RailwayPhoneOfficeApp.Services\RailwayPhoneOfficeApp.Services.csproj", "{0E9B5764-D9A8-4918-8C2C-13C6C7FE5BD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Data", "RailwayPhoneOfficeApp.Data\RailwayPhoneOfficeApp.Data.csproj", "{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{66BA5104-E785-4352-8579-B4C4E34C9544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66BA5104-E785-4352-8579-B4C4E34C9544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66BA5104-E785-4352-8579-B4C4E34C9544}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F97A2B1-CAA1-4FAE-9F1F-F8EBE4F298DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F97A2B1-CAA1-4FAE-9F1F-F8EBE4F298DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F97A2B1-CAA1-4FAE-9F1F-F8EBE4F298DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F97A2B1-CAA1-4FAE-9F1F-F8EBE4F298DF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0E9B5764-D9A8-4918-8C2C-13C6C7FE5BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0E9B5764-D9A8-4918-8C2C-13C6C7FE5BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E9B5764-D9A8-4918-8C2C-13C6C7FE5BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E9B5764-D9A8-4918-8C2C-13C6C7FE5BD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
