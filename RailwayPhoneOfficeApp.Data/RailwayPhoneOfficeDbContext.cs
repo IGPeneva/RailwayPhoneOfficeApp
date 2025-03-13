@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RailwayPhoneOfficeApp.Data;
 
-public class ApplicationDbContext : IdentityDbContext
+public class RailwayPhoneOfficeDbContext : IdentityDbContext
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public RailwayPhoneOfficeDbContext(DbContextOptions<RailwayPhoneOfficeDbContext> options)
         : base(options)
     {
     }
