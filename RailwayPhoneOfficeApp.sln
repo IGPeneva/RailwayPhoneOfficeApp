@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Data", "RailwayPhoneOfficeApp.Data\RailwayPhoneOfficeApp.Data.csproj", "{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Common", "RailwayPhoneOfficeApp.Common\RailwayPhoneOfficeApp.Common.csproj", "{585CDE67-A59D-4816-86A8-AE8E087F1A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RailwayPhoneOfficeApp.Data.Models", "RailwayPhoneOfficeApp.Data.Models\RailwayPhoneOfficeApp.Data.Models.csproj", "{4FA68563-64F4-4FFA-BBDA-1A3B4BE62B74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B67BCF05-AFAA-4170-ACE1-D90AD52B38C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585CDE67-A59D-4816-86A8-AE8E087F1A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585CDE67-A59D-4816-86A8-AE8E087F1A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585CDE67-A59D-4816-86A8-AE8E087F1A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585CDE67-A59D-4816-86A8-AE8E087F1A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA68563-64F4-4FFA-BBDA-1A3B4BE62B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA68563-64F4-4FFA-BBDA-1A3B4BE62B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA68563-64F4-4FFA-BBDA-1A3B4BE62B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA68563-64F4-4FFA-BBDA-1A3B4BE62B74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

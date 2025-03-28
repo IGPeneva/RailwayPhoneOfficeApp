@@ -1,8 +1,8 @@
 ﻿
-using Microsoft.AspNetCore.Identity;
-
 namespace RailwayPhoneOfficeApp.Data.Models
 {
+    using Microsoft.AspNetCore.Identity;
+
     public class ApplicationUser : IdentityUser<Guid>
     {
         public ApplicationUser()
