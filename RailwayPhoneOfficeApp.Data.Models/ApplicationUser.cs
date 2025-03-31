@@ -10,5 +10,9 @@ namespace RailwayPhoneOfficeApp.Data.Models
             Id = Guid.NewGuid();
         }
 
+        public bool IsEmployee { get; set; }
+
+        public virtual Employee Employee { get; set; }
+
     }
 }

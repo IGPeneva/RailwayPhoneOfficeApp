@@ -19,12 +19,11 @@ namespace RailwayPhoneOfficeApp.Data.Models
         [Comment("Foreign key to the TelephoneExchange entity, workplace")]
         public Guid TelephoneExchangeId { get; set; }
         public virtual TelephoneExchange TelephoneExchange { get; set; } = null!;
-
-        [Comment("Foreign key to the Manager identifier")]
-        public Guid? ManagerId { get; set; }
-        public virtual Employee? Manager { get; set; }
        
         public virtual ICollection<EmployeeTask> Tasks { get; set; } = new HashSet<EmployeeTask>();
+
+        public Guid ApplicationUserId { get; set; }
+        public virtual ApplicationUser ApplicationUser { get; set; }
 
     }
 }

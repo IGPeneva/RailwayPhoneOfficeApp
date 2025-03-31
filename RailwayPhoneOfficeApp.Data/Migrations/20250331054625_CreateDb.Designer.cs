@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RailwayPhoneOfficeApp.Data;
 
@@ -11,9 +12,11 @@ using RailwayPhoneOfficeApp.Data;
 namespace RailwayPhoneOfficeApp.Data.Migrations
 {
     [DbContext(typeof(RailwayPhoneOfficeDbContext))]
-    partial class RailwayPhoneOfficeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250331054625_CreateDb")]
+    partial class CreateDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -358,13 +361,7 @@ namespace RailwayPhoneOfficeApp.Data.Migrations
                         .HasDefaultValue(false)
                         .HasComment("Replacement part works or not");
 
-                    b.Property<Guid>("TelephoneExchangeId")
-                        .HasColumnType("uniqueidentifier")
-                        .HasComment("Foreign key to the TelephoneExchange entity");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TelephoneExchangeId");
 
                     b.ToTable("Replacements", t =>
                         {
@@ -550,17 +547,6 @@ namespace RailwayPhoneOfficeApp.Data.Migrations
                     b.Navigation("TelephoneExchange");
                 });
 
-            modelBuilder.Entity("RailwayPhoneOfficeApp.Data.Models.Replacement", b =>
-                {
-                    b.HasOne("RailwayPhoneOfficeApp.Data.Models.TelephoneExchange", "TelephoneExchange")
-                        .WithMany("Replacements")
-                        .HasForeignKey("TelephoneExchangeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("TelephoneExchange");
-                });
-
             modelBuilder.Entity("RailwayPhoneOfficeApp.Data.Models.Task", b =>
                 {
                     b.HasOne("RailwayPhoneOfficeApp.Data.Models.Action", "Action")
@@ -599,11 +585,6 @@ namespace RailwayPhoneOfficeApp.Data.Migrations
             modelBuilder.Entity("RailwayPhoneOfficeApp.Data.Models.Task", b =>
                 {
                     b.Navigation("Employees");
-                });
-
-            modelBuilder.Entity("RailwayPhoneOfficeApp.Data.Models.TelephoneExchange", b =>
-                {
-                    b.Navigation("Replacements");
                 });
 #pragma warning restore 612, 618
         }

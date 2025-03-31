@@ -16,5 +16,7 @@ namespace RailwayPhoneOfficeApp.Data.Models
         [Comment("Count of subscribers")]
         public int Capacity { get; set; }
 
+        public virtual ICollection<Replacement> Replacements { get; set; } = new HashSet<Replacement>();
+
     }
 }

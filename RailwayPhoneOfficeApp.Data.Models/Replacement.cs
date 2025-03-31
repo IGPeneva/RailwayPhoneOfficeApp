@@ -1,6 +1,4 @@
 ﻿
-
-
 namespace RailwayPhoneOfficeApp.Data.Models
 {
     using Microsoft.EntityFrameworkCore;
@@ -18,7 +16,9 @@ namespace RailwayPhoneOfficeApp.Data.Models
         [Comment("Replacement part works or not")]
         public bool Status { get; set; }
 
-
+        [Comment("Foreign key to the TelephoneExchange entity")]
+        public Guid TelephoneExchangeId { get; set; }
+        public virtual TelephoneExchange TelephoneExchange { get; set; }
 
     }
 }

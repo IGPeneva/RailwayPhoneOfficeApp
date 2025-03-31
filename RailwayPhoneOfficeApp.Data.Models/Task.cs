@@ -33,6 +33,7 @@ namespace RailwayPhoneOfficeApp.Data.Models
         [Comment("Foreign key to the Action entity")]
         public Guid ActionId { get; set; }
         public virtual Action Action { get; set; } = null!;
-  
+
+        public virtual ICollection<EmployeeTask> Employees { get; set; } = new HashSet<EmployeeTask>();
     }
 }

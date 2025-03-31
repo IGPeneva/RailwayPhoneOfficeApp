@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Folder Include="Files\" />
-    <Folder Include="Configuration\" />
     <Folder Include="Dtos\" />
     <Folder Include="Utilities\" />
     <Folder Include="Seeding\" />
