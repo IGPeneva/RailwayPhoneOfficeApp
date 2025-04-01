@@ -22,8 +22,7 @@ namespace RailwayPhoneOfficeApp.Data.Models
        
         public virtual ICollection<EmployeeTask> Tasks { get; set; } = new HashSet<EmployeeTask>();
 
-        public Guid ApplicationUserId { get; set; }
-        public virtual ApplicationUser ApplicationUser { get; set; }
+        
 
     }
 }

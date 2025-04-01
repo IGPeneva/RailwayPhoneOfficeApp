@@ -14,6 +14,16 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
                 .Property(au => au.IsEmployee)
                 .IsRequired()
                 .HasDefaultValue(false);
+
+            entity
+                .Property(au => au.IsAdmin)
+                .IsRequired()
+                .HasDefaultValue(false);
+
+            entity
+                .Property(au => au.IsCustomer)
+                .IsRequired()
+                .HasDefaultValue(false);
         }
     }
 }
