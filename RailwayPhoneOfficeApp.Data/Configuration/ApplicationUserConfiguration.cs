@@ -15,11 +15,13 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
                 .IsRequired()
                 .HasDefaultValue(false);
 
+            // Define constraints for the IsAdmin column
             entity
                 .Property(au => au.IsAdmin)
                 .IsRequired()
                 .HasDefaultValue(false);
 
+            // Define constraints for the IsCustomer column
             entity
                 .Property(au => au.IsCustomer)
                 .IsRequired()

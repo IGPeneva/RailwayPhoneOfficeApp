@@ -10,6 +10,7 @@ namespace RailwayPhoneOfficeApp.Data;
 
 public class RailwayPhoneOfficeDbContext : IdentityDbContext<ApplicationUser,IdentityRole<Guid>, Guid>
 {
+    //This constructor is introduced for debugging purposes
     public RailwayPhoneOfficeDbContext()
     {
         

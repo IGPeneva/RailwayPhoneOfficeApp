@@ -10,9 +10,6 @@ namespace RailwayPhoneOfficeApp.Data.Models
         {
             Id = Guid.NewGuid();
         }
-
-        
-
        
 
         public bool IsAdmin { get; set; }

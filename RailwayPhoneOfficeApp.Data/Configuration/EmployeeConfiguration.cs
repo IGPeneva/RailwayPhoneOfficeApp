@@ -25,12 +25,7 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(PositionMaxLength);
 
-            //// Define relation between the Employee and ApplicationUser entities
-            //entity
-            //    .HasOne(e => e.ApplicationUser)
-            //    .WithOne(u => u.Employee)
-            //    .HasForeignKey<Employee>(e => e.ApplicationUserId)
-            //    .OnDelete(DeleteBehavior.NoAction);
+      
 
         }
     }

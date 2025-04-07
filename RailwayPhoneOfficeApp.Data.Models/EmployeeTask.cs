@@ -17,5 +17,7 @@ namespace RailwayPhoneOfficeApp.Data.Models
 
         public virtual Task Task { get; set; } = null!;
 
+        [Comment("Shows that the user's task has been completed")]
+        public bool IsDeleted { get; set; }
     }
 }
