@@ -1,0 +1,17 @@
+[
+  {
+    "Id": "49e0e963-1b8b-4011-87c2-3b71d3619e7b",
+    "Name": "ATC-Shumen",
+    "Capacity": 300
+  },
+  {
+    "Id": "d8c290f3-b3d2-4f6f-88e9-6d8d9e60b9d4",
+    "Name": "ATC-Varna",
+    "Capacity": 400
+  },
+  {
+    "Id": "0f42cb90-6450-4f36-b73b-cc1a4d0e26a7",
+    "Name": "ATC-Ruse",
+    "Capacity": 500
+  }
+]

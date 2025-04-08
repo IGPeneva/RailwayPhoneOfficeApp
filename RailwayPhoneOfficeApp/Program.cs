@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using RailwayPhoneOfficeApp.Data;
 using RailwayPhoneOfficeApp.Data.Models;
+using RailwayPhoneOfficeApp.Data.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,5 +45,13 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var dbContext = services.GetRequiredService<RailwayPhoneOfficeDbContext>();
+
+    await DataProcessor.ImportTelephoneExchangesFromJson(dbContext);
+}
 
 app.Run();
