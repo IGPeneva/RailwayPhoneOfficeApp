@@ -36,7 +36,11 @@ namespace RailwayPhoneOfficeApp.Data.Models
 
         public virtual ICollection<EmployeeTask> Employees { get; set; } = new HashSet<EmployeeTask>();
 
+        [Comment("Foreign key to the ApplicationUser entity")]
         public Guid ApplicationUserId { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
+
+        [Comment("Shows if task is deleted")]
+        public bool IsDeleted { get; set; }
     }
 }

@@ -22,6 +22,11 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
             entity
                 .HasKey(et => new { et.EmployeeId, et.TaskId });
 
+            // Set default value of IsDeleted property
+            entity
+                .Property(et => et.IsDeleted)
+                .IsRequired()
+                .HasDefaultValue(false);
 
             // Define relation between the Employee and EmployeeTask entities
             entity
@@ -37,6 +42,9 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
                 .HasForeignKey(et => et.TaskId)
                 .OnDelete(DeleteBehavior.NoAction);
 
+            // Ensure that only existing records are used in the business logic
+            entity
+                .HasQueryFilter(et => et.IsDeleted == false);
         }
     }
 }

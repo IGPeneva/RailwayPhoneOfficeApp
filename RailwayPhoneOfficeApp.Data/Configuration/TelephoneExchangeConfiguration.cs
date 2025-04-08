@@ -27,7 +27,6 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
                 .IsRequired()
                 .HasMaxLength(MaxCapacity);
 
-
         }
     }
 }

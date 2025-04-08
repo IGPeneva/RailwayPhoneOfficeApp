@@ -36,9 +36,21 @@ namespace RailwayPhoneOfficeApp.Data.Configuration
                 .Property(t => t.EndDate)
                 .IsRequired();
 
+            // Define constraints for the Notes column 
             entity
                 .Property(t => t.Notes)
                 .HasMaxLength(NotesMaxLength);
+
+            // Set default value for the IsDelete column
+            entity
+                .Property(t => t.IsDeleted)
+                .IsRequired()
+                .HasDefaultValue(false);
+
+            // Ensure that only existing records are used in the business logic
+            entity
+                .HasQueryFilter(et => et.IsDeleted == false);
+
 
         }
     }
