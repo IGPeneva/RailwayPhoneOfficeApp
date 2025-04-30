@@ -15,6 +15,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.Message = "Welcome to the Railway PhoneOffice!";
         return View();
     }
 

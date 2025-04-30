@@ -1,0 +1,27 @@
+﻿@using RailwayPhoneOfficeApp.Models
+@model ExchangeCreateViewModel
+
+<h2>Добави нова централа</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label for="Name">Exchange Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Capacity">Capacity</label>
+        <input asp-for="Capacity" class="form-control" />
+        <span asp-validation-for="Capacity" class="text-danger"></span>
+    </div>
+   
+    <button type="submit" class="btn btn-primary mt-2">Create Telephone exchange</button>
+</form>
+
+<a asp-action="Index">Back to Exchanges List</a>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

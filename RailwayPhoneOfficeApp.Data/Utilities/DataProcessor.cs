@@ -1,14 +1,28 @@
 ﻿
-using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
-using RailwayPhoneOfficeApp.Data.Models;
-using Task = System.Threading.Tasks.Task;
-
 namespace RailwayPhoneOfficeApp.Data.Utilities
 {
-    public static class DataProcessor
+
+    using RailwayPhoneOfficeApp.Data.Models;
+    using RailwayPhoneOfficeApp.Data.Utilities.Interfaces;
+    using static RailwayPhoneOfficeApp.Common.OutputMessages.ErrorMessages;
+
+    using Microsoft.Extensions.Logging;
+    using Microsoft.EntityFrameworkCore;
+
+    using System.Text.Json;
+    using Task = System.Threading.Tasks.Task;
+
+    public class DataProcessor
     {
-        public static async Task ImportTelephoneExchangesFromJson(RailwayPhoneOfficeDbContext context)
+        private readonly IValidator entityValidator;
+        private readonly ILogger<DataProcessor> logger;
+
+        public DataProcessor(IValidator entityValidator, ILogger<DataProcessor> logger)
+        {
+            this.entityValidator = entityValidator;
+            this.logger = logger;
+        }
+        public async Task ImportTelephoneExchangesFromJson(RailwayPhoneOfficeDbContext context)
         {
             string path = Path.Combine(AppContext.BaseDirectory,"Files", "exchanges.json");
 

@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using RailwayPhoneOfficeApp.Data;
 using RailwayPhoneOfficeApp.Data.Models;
 using RailwayPhoneOfficeApp.Data.Utilities;
+using RailwayPhoneOfficeApp.Data.Utilities.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("RailwayPhoneOfficeAppDbConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<RailwayPhoneOfficeDbContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddScoped<IValidator, EntityValidator>();
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services
@@ -48,10 +52,14 @@ app.MapRazorPages();
 
 using (var scope = app.Services.CreateScope())
 {
-    var services = scope.ServiceProvider;
-    var dbContext = services.GetRequiredService<RailwayPhoneOfficeDbContext>();
+    IServiceProvider services = scope.ServiceProvider;
+    RailwayPhoneOfficeDbContext dbContext = services.GetRequiredService<RailwayPhoneOfficeDbContext>();
+    IValidator entityValidator = services.GetRequiredService<IValidator>();
+    ILogger<DataProcessor> logger = services.GetRequiredService<ILogger<DataProcessor>>();
 
-    await DataProcessor.ImportTelephoneExchangesFromJson(dbContext);
+    DataProcessor dataProcessor = new DataProcessor(entityValidator, logger);
+
+    //await DataProcessor.ImportTelephoneExchangesFromJson(dbContext);
 }
 
 app.Run();
